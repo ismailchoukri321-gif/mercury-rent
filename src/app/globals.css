@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+body { margin: 0; color: #fff; background: #101d22; font-family: "Manrope", Arial, sans-serif; }
+.shell { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.eyebrow { letter-spacing: .16em; text-transform: uppercase; font-size: 11px; font-weight: 700; }
+.shadow-soft { box-shadow: 0 18px 45px rgba(20,32,37,.11); }
+/* Prices are supplied on request, not displayed publicly. */
+.reservation-summary-price { display: none; }
+main aside .flex.justify-between { display: none; }
+
+/* Local destination photography — no external image dependency. */
+.grid.gap-4.sm\:grid-cols-2.lg\:grid-cols-4 > .group:nth-child(1) > div:first-child {
+  background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 70%), url('/cities/tangier.png') !important;
+}
+.grid.gap-4.sm\:grid-cols-2.lg\:grid-cols-4 > .group:nth-child(2) > div:first-child {
+  background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 70%), url('/cities/tetouan.png') !important;
+}
+.grid.gap-4.sm\:grid-cols-2.lg\:grid-cols-4 > .group:nth-child(3) > div:first-child {
+  background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 70%), url('/cities/al-hoceima.png') !important;
+}
+.grid.gap-4.sm\:grid-cols-2.lg\:grid-cols-4 > .group:nth-child(4) > div:first-child {
+  background-image: linear-gradient(0deg, rgba(0,0,0,.8), transparent 70%), url('/cities/nador.png') !important;
+}
+
+
+@keyframes rise-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-ring { 0%, 100% { box-shadow: 0 12px 30px rgba(37,211,102,.35); } 50% { box-shadow: 0 12px 42px rgba(37,211,102,.7); } }
+.animate-rise { animation: rise-in .7s cubic-bezier(.22,1,.36,1) both; }
+.animate-rise-delay { animation: rise-in .7s .16s cubic-bezier(.22,1,.36,1) both; }
+.animate-whatsapp { animation: pulse-ring 2.5s ease-in-out infinite; }
+.site-reveal { opacity: 0; transform: translateY(42px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+.site-reveal-visible { opacity: 1; transform: translateY(0); }
+.fleet-rail { scrollbar-width: none; scroll-snap-type: x mandatory; }
+.fleet-rail::-webkit-scrollbar { display: none; }
+.fleet-rail > div { scroll-snap-align: start; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } .site-reveal { opacity: 1; transform: none; transition: none; } }

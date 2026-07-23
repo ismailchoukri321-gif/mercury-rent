@@ -1,0 +1,23 @@
+<svg width="640" height="170" viewBox="0 0 640 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mercury Rent</title>
+  <desc id="desc">Premium car rental logo with a stylised M road, sports car and wing</desc>
+  <defs>
+    <linearGradient id="gold" x1="18" y1="20" x2="140" y2="145" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3D77A"/>
+      <stop offset=".45" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#8E6D12"/>
+    </linearGradient>
+  </defs>
+  <path d="M18 132V42L49 92L79 42L110 132" stroke="url(#gold)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M49 92L62 132" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M67 103L72 112M75 119L80 128" stroke="#111111" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M25 56C37 38 57 29 83 30C100 30 115 35 127 44" stroke="url(#gold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M34 51C25 42 19 33 18 21C31 28 41 35 48 45M42 44C35 33 33 24 35 14C46 23 54 34 56 43" stroke="url(#gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M77 53C87 45 100 43 111 46L128 57H142C148 57 152 61 155 67L159 76H72L77 53Z" fill="#111111" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M90 54L100 48H111L121 57H85L90 54Z" fill="#C9A227" opacity=".82"/>
+  <circle cx="91" cy="77" r="7" fill="#111111" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="143" cy="77" r="7" fill="#111111" stroke="url(#gold)" stroke-width="3"/>
+  <text x="184" y="80" fill="white" font-family="Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="7">MERCURY</text>
+  <text x="187" y="119" fill="#C9A227" font-family="Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="10">RENT</text>
+  <text x="187" y="148" fill="#D8D8D8" font-family="Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="3">DRIVE WITH CONFIDENCE</text>
+</svg>

@@ -1,0 +1,2 @@
+import { NextRequest, NextResponse } from "next/server";
+export async function POST(request: NextRequest) { const body = await request.json(); if (!body.carId || !body.pickupDate || !body.returnDate) return NextResponse.json({ error: "Informations de réservation incomplètes" }, { status: 400 }); return NextResponse.json({ reference: `AR-${Math.floor(1000 + Math.random() * 9000)}`, status: "PENDING" }, { status: 201 }); }
