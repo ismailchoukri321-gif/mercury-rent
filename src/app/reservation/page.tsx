@@ -1,7 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 import { Check, ChevronRight, CreditCard, MapPin, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { cars } from "@/lib/cars";
@@ -10,7 +9,8 @@ const cities = ["Tanger", "Tétouan", "Al Hoceïma", "Nador"];
 type Confirmation = { name: string; phone: string; age: string; nationality: string; pickup: string; returnCity: string; pickupDate: string; returnDate: string };
 
 export default function Reservation() {
-  const id = useSearchParams().get("car");
+  const [id, setId] = useState<string | null>(null);
+  useEffect(() => setId(new URLSearchParams(window.location.search).get("car")), []);
   const car = cars.find((item) => item.id === id) ?? cars[0];
   const [confirmation, setConfirmation] = useState<Confirmation | null>(null);
   const field = "mt-2 w-full rounded-xl border border-white/10 bg-black/20 p-3 font-normal text-white outline-rust [color-scheme:dark] placeholder:text-white/35";
